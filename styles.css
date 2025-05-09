@@ -1,0 +1,46 @@
+/* Make sure body and html take up the full viewport */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Ensure the container of the image fills the entire viewport */
+.zoomable-area {
+    position: relative;
+    width: 100%; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden; /* Hide anything that goes out of bounds */
+    overflow-y: scroll; /* Allow vertical scrolling */
+    touch-action: none; /* Disable default touch interactions to control zooming */
+}
+
+/* The content that will be zoomed */
+.content {
+    width: 100%;        /* Make content width fill the page */
+    height: auto;       /* Maintain aspect ratio */
+    transition: transform 0.3s ease;  /* Smooth zoom transition */
+    will-change: transform; /* Hint for performance optimization */
+}
+
+/* Style the image */
+.zoomable-area img {
+    width: 100%;        /* Image will be stretched to fill the width */
+    height: auto;       /* Maintain aspect ratio */
+}
+
+/* Hide clickable areas initially */
+.clickable-area {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 128, 0, 0.5);
+    display: none;
+    cursor: pointer;
+}
+
+/* Example clickable area styles (you can customize these) */
+.clickable-area:hover {
+    background-color: rgba(0, 128, 0, 0.8);
+}
