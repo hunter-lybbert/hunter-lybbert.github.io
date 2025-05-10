@@ -44,3 +44,10 @@ html, body {
 .clickable-area:hover {
     background-color: rgba(0, 128, 0, 0.8);
 }
+
+.inner-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
