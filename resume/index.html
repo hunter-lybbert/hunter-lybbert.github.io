@@ -13,31 +13,52 @@
 
 <body>
 
-<nav>
-    <a href="../">Home</a>
-    <a href="/about/">About</a>
-    <a href="/projects/">Projects</a>
-    <a href="/resume/">Resume</a>
+<header class="site-header">
+    <nav class="site-nav">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/projects/">Projects</a>
+        <a href="https://tutorials.hunterlybbert.com">Tutorials</a>
+        <a href="/resume/" class="active">Resume</a>
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </nav>
+</header>
 
-    <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
-</nav>
+<main class="resume-container">
+    <div class="resume-header">
+        <h1>Hunter Lybbert's Resume</h1>
+        <!-- <div class="resume-actions">
+            <a href="/assets/resume/hunter_lybbert_resume_august_2026.pdf" download="Hunter_Lybbert_Resume.pdf" class="btn-download">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Download PDF
+            </a>
+        </div> -->
+    </div>
 
-<h1>Resume</h1>
-
-<div class="links">
-    <a href="/assets/resume/hunter_lybbert_resume_august_2026.pdf" target="_blank">
-        View Resume PDF
-    </a>
-</div>
-
-<p>
-Additional resume details will be added here in the near future.
-</p>
-
-<script src="/js/theme.js"></script>
+    <div class="pdf-viewer-wrapper">
+        <object
+            data="/assets/resume/hunter_lybbert_resume_august_2026.pdf#view=FitH"
+            type="application/pdf"
+            class="pdf-viewer"
+        >
+            <div class="pdf-fallback">
+                <p>Your browser doesn't support inline PDF previews.</p>
+                <a href="/assets/resume/hunter_lybbert_resume_august_2026.pdf" target="_blank" rel="noopener noreferrer" class="btn-fallback">
+                    Open / Download Resume PDF
+                </a>
+            </div>
+        </object>
+    </div>
+</main>
 
 <footer>
     <p>© Hunter Lybbert</p>
 </footer>
+
+<script src="/js/theme.js"></script>
 </body>
 </html>
